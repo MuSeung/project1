@@ -20,4 +20,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		DELETE FROM category WHERE cat_num=#{cat_num}
 	</delete>
 	
+	<select id="searchcate" parameterType="String" resultType="Category">
+		SELECT cat_num_up, cat_name, cat_num, cat_name FROM category WHERE cat_name LIKE CONCAT('%', #{txt}, '%')
+	</select>
 </mapper>
