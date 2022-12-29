@@ -43,4 +43,9 @@ public class ItemService implements MyService<Integer, Item>{
 		return mapper.selectall();
 	}
 	
+	//Item Search기능 추가
+	public List<Item> searchItem(String txt) throws Exception{
+		return mapper.searchItem(txt);
+	}
+	
 }
