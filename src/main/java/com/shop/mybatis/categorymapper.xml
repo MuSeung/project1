@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.CategoryMapper">
+	
+	<select id="select" parameterType="int" resultType="Category">
+		SELECT * FROM category WHERE cat_num=#{cat_num}
+	</select>
+	<select id="selectall" resultType="Category">
+		SELECT * FROM category
+	</select>
+	<insert id="insert" parameterType="Category">
+		INSERT INTO category VALUES (cat_num,#{cat_num_up},#{cat_name})
+	</insert>
+	<update id="update" parameterType="Category">
+		UPDATE category SET cat_num_up=#{cat_num_up},cat_name=#{cat_name} WHERE cat_num=#{cat_num}
+	</update>
+	<delete id="delete" parameterType="Category">
+		DELETE FROM category WHERE cat_num=#{cat_num}
+	</delete>
+	
+</mapper>
