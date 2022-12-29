@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shop.dto.Adm;
+import com.shop.dto.User;
 import com.shop.frame.MyService;
-import com.shop.mapper.AdmMapper;
+import com.shop.mapper.UserMapper;
 
 @Service
-public class AdmService implements MyService<String, Adm>{
+public class UserService implements MyService<String, User>{
 
 	@Autowired
-	AdmMapper mapper;
+	UserMapper mapper;
 	
 	@Override
-	public void register(Adm v) throws Exception {
+	public void register(User v) throws Exception {
 		mapper.insert(v);
 		
 	}
@@ -28,18 +28,18 @@ public class AdmService implements MyService<String, Adm>{
 	}
 
 	@Override
-	public void modify(Adm v) throws Exception {
+	public void modify(User v) throws Exception {
 		mapper.update(v);
 		
 	}
 
 	@Override
-	public Adm get(String k) throws Exception {
+	public User get(String k) throws Exception {
 		return mapper.select(k);
 	}
 
 	@Override
-	public List<Adm> get() throws Exception {
+	public List<User> get() throws Exception {
 		return mapper.selectall();
 	}
 	
