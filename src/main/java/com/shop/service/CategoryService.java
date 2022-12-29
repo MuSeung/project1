@@ -43,4 +43,9 @@ public class CategoryService implements MyService<Integer, Category>{
 		return mapper.selectall();
 	}
 	
+	//카테고리 검색기능
+	public List<Category> searchcate(String txt) throws Exception{
+		return mapper.searchcate(txt);
+	}
+	
 }
