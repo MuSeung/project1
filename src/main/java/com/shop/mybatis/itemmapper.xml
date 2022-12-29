@@ -20,4 +20,8 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		DELETE FROM item WHERE i_code=#{i_code}
 	</delete>
 	
+	<select id="searchItem" parameterType="String" resultType="Item">
+		SELECT * FROM item WHERE i_name LIKE CONCAT('%', #{txt}, '%')
+	</select>
+	
 </mapper>
