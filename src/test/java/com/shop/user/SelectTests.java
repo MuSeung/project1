@@ -1,4 +1,4 @@
-package com.shop.adm;
+package com.shop.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,17 +8,18 @@ import com.shop.dto.User;
 import com.shop.service.UserService;
 
 @SpringBootTest
-class UpdateTests {
+class SelectTests {
 
 	@Autowired
 	UserService service;
 	
 	@Test
 	void contextLoads() {
-		User obj = new User("lss", "999900", "이순신2", "01000000000", "lssnew@naver.com", "전라남도 통영시 충무로 222");
+		User obj = null;
 		try {
-			service.modify(obj);
+			obj = service.get("pjw");
 			System.out.println("OK");
+			System.out.println(obj);
 		} catch (Exception e) {
 			System.out.println("Fail");
 			e.printStackTrace();
