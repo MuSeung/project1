@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 <mapper namespace="com.shop.mapper.UserMapper">
 	
 	<select id="select" parameterType="String" resultType="User">
-		SELECT * FROM user WHERE id=#{id}
+		SELECT * FROM user WHERE userid=#{userid}
 	</select>
 	<select id="selectall" resultType="User">
 		SELECT * FROM user
@@ -14,10 +14,10 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		INSERT INTO user VALUES (#{userid},#{pwd},#{name},#{tel},#{email},#{addr})
 	</insert>
 	<update id="update" parameterType="User">
-		UPDATE user SET pwd=#{pwd},name=#{name},tel=#{tel},email=#{email},addr=#{addr} WHERE id=#{id}
+		UPDATE user SET pwd=#{pwd},name=#{name},tel=#{tel},email=#{email},addr=#{addr} WHERE userid=#{userid}
 	</update>
 	<delete id="delete" parameterType="String">
-		DELETE FROM user WHERE id=#{id}
+		DELETE FROM user WHERE userid=#{userid}
 	</delete>
 	
 </mapper>
