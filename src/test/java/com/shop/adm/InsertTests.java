@@ -1,24 +1,23 @@
-package com.shop.cust;
+package com.shop.adm;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.shop.dto.Cust;
-import com.shop.service.CustService;
+import com.shop.dto.Adm;
+import com.shop.service.AdmService;
 
 @SpringBootTest
-class SelectTests {
+class InsertTests {
 
 	@Autowired
-	CustService service;
+	AdmService service;
 	
 	@Test
 	void contextLoads() {
-		Cust cust = null;
+		Adm obj = new Adm("1","2",3);
 		try {
-			cust = service.get("id01");
-			System.out.println(cust);
+			service.register(obj);
 			System.out.println("OK");
 		} catch (Exception e) {
 			System.out.println("Fail");

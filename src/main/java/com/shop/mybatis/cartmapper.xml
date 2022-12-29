@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shop.mapper.CartMapper">
+<mapper namespace="com.shop.mapper.AdmMapper">
 	
-	<insert id="insert" parameterType="Cart">
-		INSERT INTO cart VALUES (id, #{cust_id}, #{item_id}, #{cnt}, NOW())
+	<insert id="insert" parameterType="Adm">
+	
 	</insert>
 	
 </mapper>
