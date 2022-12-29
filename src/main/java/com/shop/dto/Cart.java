@@ -16,4 +16,10 @@ public class Cart {
 	private String userid;
 	private int i_code;
 	private int cnt;
+	
+	public Cart(String userid, int i_code, int cnt){
+		this.userid=userid;
+		this.i_code=i_code;
+		this.cnt=cnt;
+	}
 }

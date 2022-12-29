@@ -15,14 +15,13 @@ public class InsertTests {
 	
 	@Test
 	void contextLoads() {
-		Cart obj = new Cart(30,"lss", 100, 5);
+		Cart obj = new Cart("lss", 100, 5);
 		try {
 			service.register(obj);
 			System.out.println("OK");
 		} catch (Exception e) {
 			System.out.println("Fail");
 			e.printStackTrace();
-		}
-		
+		}		
 	}
 }
